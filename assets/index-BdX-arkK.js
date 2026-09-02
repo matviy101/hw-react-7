@@ -16,18 +16,18 @@ align-items: center;
 flex-direction: column;
 `,Xn=Kn.li`
 display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-  margin-bottom: 10px;
-  font-size: 20px;
-  `,Zn=Kn.button`
-  width: 120px;
-  height: 40px;
-  border-radius: 10px;
-  border: none;
-  background-color: red;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-   `,Qn=class e extends _.Component{static tasks=[{id:1,text:`task1`},{id:2,text:`task2`},{id:3,text:`task3`}];deleteTask(t){e.tasks=e.tasks.filter(e=>e.id!==t),this.forceUpdate()}render(){return(0,Jn.jsxs)(Yn,{children:[(0,Jn.jsx)(`h1`,{children:`Task List`}),(0,Jn.jsx)(`ul`,{children:e.tasks.map(e=>(0,Jn.jsxs)(Xn,{children:[e.text,(0,Jn.jsx)(Zn,{onClick:()=>this.deleteTask(e.id),children:`Delete`})]},e.id))})]})}};function $n(){return(0,Jn.jsx)(Qn,{})}(0,v.createRoot)(document.getElementById(`root`)).render((0,Jn.jsx)(_.StrictMode,{children:(0,Jn.jsx)($n,{})}));
+justify-content: space-between;
+align-items: center;
+gap: 30px;
+margin-bottom: 10px;
+font-size: 20px;
+`,Zn=Kn.button`
+width: 120px;
+height: 40px;
+border-radius: 10px;
+border: none;
+background-color: red;
+color: white;
+font-size: 20px;
+cursor: pointer;
+`,Qn=class e extends _.Component{static tasks=[{id:1,text:`task1`},{id:2,text:`task2`},{id:3,text:`task3`}];addTask(){let t=prompt(`Enter a task:`);t&&(e.tasks.push({id:e.tasks.length+1,text:t}),this.forceUpdate())}deleteTask(t){e.tasks=e.tasks.filter(e=>e.id!==t),this.forceUpdate()}render(){return(0,Jn.jsxs)(Yn,{children:[(0,Jn.jsx)(`h1`,{children:`Task List`}),(0,Jn.jsx)(Zn,{onClick:()=>this.addTask(),children:`Add Task`}),(0,Jn.jsx)(`ul`,{children:e.tasks.map(e=>(0,Jn.jsxs)(Xn,{children:[e.text,(0,Jn.jsx)(Zn,{onClick:()=>this.deleteTask(e.id),children:`Delete`})]},e.id))})]})}};function $n(){return(0,Jn.jsx)(Qn,{})}(0,v.createRoot)(document.getElementById(`root`)).render((0,Jn.jsx)(_.StrictMode,{children:(0,Jn.jsx)($n,{})}));
